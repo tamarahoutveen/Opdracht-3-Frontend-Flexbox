@@ -1,0 +1,140 @@
+/*////////////////////////////////////////////////////////////////////////
+Table of Contents:
+    1. Global Styles
+    2. Typografie
+    3. Areas
+        3.1 Navigatie
+        3.2 Header
+        3.3 Main content
+        3.4 Footer
+////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////
+    1. Global Styles
+////////////////////////*/
+body{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+:root{
+    --darkgray:#383838;
+}
+img{
+    max-width:100%;
+}
+
+/*////////////////////////
+    3.0 Flexbox settings
+////////////////////////*/
+main{
+    flex-basis:auto;
+    flex-grow:5;
+    flex-shrink: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y:scroll;
+}
+
+/*////////////////////////
+    3.1 Navigatie
+////////////////////////*/
+nav{
+    height:100vh;
+    flex-shrink: 1;
+    flex-grow:2;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:40px;
+    flex-basis:350px;
+}
+nav div{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap:10px;
+}
+nav ul li{
+    list-style:none;
+}
+nav ul li a{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items:center;
+}
+nav ul:first-of-type{
+    display: flex;
+    flex-basis:auto;
+    flex-grow: 1;
+    flex-direction: column;
+    gap:10px;
+}
+nav ul:last-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap:10px;
+}
+nav ul:last-of-type li{
+    display: flex;
+}
+nav ul:last-of-type button{
+    flex-basis:100%;
+}
+
+/*////////////////////////
+    3.2. Header
+////////////////////////*/
+
+header{
+    padding:100px 0px;
+    text-align: center;
+    background:url("../assets/placeholder-image.svg") center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*////////////////////////
+    3.3. Main content
+////////////////////////*/
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding:50px 100px;
+    gap:30px;
+    row-gap:30px;
+    flex-wrap: wrap;
+}
+.main-content article{
+    flex-basis:260px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:stretch;
+    gap:20px;
+}
+article .course-metadata{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.course-metadata img{
+    width:20px;
+}
+/*////////////////////////
+    3.4. Footer
+////////////////////////*/
+footer{
+    background:var(--darkgray);
+    color:#fff;
+    padding:10px;
+    text-align: center;
+}
